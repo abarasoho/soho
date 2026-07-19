@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- --- SEO & Meta Tags --- -->
+    <title>Aba Ra! Soho — Become One of Our First Guests</title>
+    <meta name="description" content="Discover Aba Ra!, opening soon in the heart of Soho, London. Join our exclusive guest list for early reservations and a complimentary glass of Georgian wine.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abara.co.uk/soho">
+    <meta property="og:title" content="Aba Ra! Soho — Become One of Our First Guests">
+    <meta property="og:description" content="A celebrated Georgian dining experience is coming to Soho. Sign up for early table access and a complimentary glass of wine.">
+    <meta property="og:image" content="https://abara.co.uk/grapevine-tendrils-desktop.jpg">
+
+    <!-- Twitter Cards -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://abara.co.uk/soho">
+    <meta property="twitter:title" content="Aba Ra! Soho — Become One of Our First Guests">
+    <meta property="twitter:description" content="A celebrated Georgian dining experience is coming to Soho. Sign up for early table access and a complimentary glass of wine.">
+    <meta property="twitter:image" content="https://abara.co.uk/grapevine-tendrils-desktop.jpg">
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Instrument+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CSS Reset & Variables --- */
+        :root {
+            --bg-color: #efeae0; /* Premium warm linen */
+            --text-main: #151515; /* Rich black */
+            --text-muted: #555555;
+            
+            --font-serif: 'Cormorant Garamond', 'Georgia', serif;
+            --font-sans: 'Instrument Sans', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            font-weight: 500;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* --- Global Layout Wrapper --- */
+        .wrapper {
+            width: 100%;
+            max-width: 480px; /* Mobile containment default */
+            padding: 2.5rem 1.5rem 4rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- 1. Header / Logo --- */
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .brand-logo {
+            width: 100%;
+            max-width: 150px; 
+            height: auto;
+            display: block;
+        }
+
+        /* --- 2. Headline & Text Blocks --- */
+        .headline {
+            font-family: var(--font-serif);
+            font-weight: 600; 
+            font-size: clamp(2.8rem, 11vw, 3.8rem);
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+            text-align: left;
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+
+        .emotional-statement {
+            font-size: 1.15rem;
+            line-height: 1.5;
+            color: var(--text-main);
+            margin-bottom: 2.5rem;
+        }
+
+        .emotional-statement p {
+            margin-bottom: 1rem;
+        }
+
+        .emotional-statement ul {
+            margin-top: 0.5rem;
+            padding-left: 1.25rem;
+        }
+
+        .emotional-statement li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* --- 3. Visual Hero Section --- */
+        .hero-image-container {
+            width: 100%;
+            margin-top: 1rem;
+            margin-bottom: 3.5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* --- 5. Form Section --- */
+        .signup-section {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 3.5rem;
+        }
+
+        .lead-form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .input-group label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+        }
+
+        .input-field {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(21, 21, 21, 0.4);
+            font-family: var(--font-sans);
+            font-weight: 500;
+            font-size: 1.05rem;
+            padding: 0.4rem 0;
+            color: var(--text-main);
+            border-radius: 0;
+            outline: none;
+            transition: border-bottom-color 0.3s ease;
+        }
+
+        .input-field:focus {
+            border-bottom: 1px solid var(--text-main);
+        }
+
+        /* --- Honeypot "Spam Guard" Style --- */
+        .form-verify-field {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 0;
+            width: 0;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .submit-btn {
+            background-color: var(--text-main);
+            color: var(--bg-color); 
+            border: none;
+            font-family: var(--font-sans);
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.9rem 1.5rem;
+            align-self: flex-start;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+            margin-top: 0.5rem;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Accessible Focus Outline for Interactive Elements */
+        .submit-btn:focus-visible,
+        .pathway-link:focus-visible,
+        .footer-link:focus-visible,
+        .cookie-banner button:focus-visible {
+            outline: 2px dashed var(--text-main);
+            outline-offset: 4px;
+        }
+
+        .privacy-note {
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* --- 6. Institutional History Proof Segment --- */
+        .history-pathway {
+            width: 100%;
+            border-top: 1px solid rgba(21, 21, 21, 0.15);
+            padding-top: 2rem;
+            text-align: left;
+            margin-bottom: 2.5rem;
+        }
+
+        .pathway-label {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            font-weight: 500; 
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .pathway-link {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            font-weight: 600; 
+            color: var(--text-main);
+            text-decoration: none;
+            display: inline-block;
+            line-height: 1.3;
+            transition: opacity 0.2s ease;
+        }
+
+        .pathway-link span {
+            font-family: var(--font-sans);
+            font-weight: 700; 
+            font-size: 1.05rem;
+            display: block;
+            color: var(--text-main); 
+            margin-top: 0.35rem;
+        }
+
+        .pathway-link:hover {
+            opacity: 0.75;
+        }
+
+        /* --- 7. Footer Elements --- */
+        footer {
+            width: 100%;
+            border-top: 1px solid rgba(21, 21, 21, 0.1);
+            padding-top: 1.5rem;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-link {
+            color: var(--text-muted);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            transition: color 0.2s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--text-main);
+        }
+
+        /* --- 8. Cookie Consent Banner --- */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--text-main);
+            color: var(--bg-color);
+            padding: 1.25rem;
+            z-index: 10000;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            transform: translateY(100%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 -8px 24px rgba(0,0,0,0.12);
+        }
+
+        .cookie-banner.is-visible {
+            transform: translateY(0);
+        }
+
+        .cookie-container {
+            width: 100%;
+            max-width: 1120px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .cookie-text a {
+            color: var(--bg-color);
+            text-decoration: underline;
+        }
+
+        .cookie-actions {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .cookie-btn {
+            font-family: var(--font-sans);
+            font-weight: 600;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 0.6rem 1rem;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+
+        .cookie-btn--accept {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+        }
+
+        .cookie-btn--reject {
+            background-color: transparent;
+            color: var(--bg-color);
+            border: 1px solid rgba(239, 234, 224, 0.3);
+        }
+
+        .cookie-btn:hover {
+            opacity: 0.9;
+        }
+
+
+        /* ==========================================================================
+           DESKTOP VIEWPORT MATRIX (Screens 1024px and wider)
+           ========================================================================== */
+        @media (min-width: 1024px) {
+            body {
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                padding: 5rem 2rem;
+            }
+
+            .wrapper {
+                max-width: 1120px; 
+                padding: 0;
+            }
+
+            header {
+                justify-content: flex-start; 
+                margin-bottom: 2rem;
+            }
+
+            .brand-logo {
+                max-width: 145px; 
+            }
+
+            .headline {
+                font-size: 4.8rem; 
+                line-height: 1.1;
+                margin-bottom: 2rem;
+                letter-spacing: -0.03em;
+            }
+
+            .emotional-statement {
+                font-size: 1.4rem;
+                max-width: 850px;
+                margin-bottom: 3.5rem;
+            }
+
+            .hero-image-container {
+                margin-top: 0;
+                margin-bottom: 4.5rem;
+            }
+
+            .hero-image {
+                content: url('grapevine-tendrils-desktop.jpg');
+                width: 100%;
+            }
+
+            /* Main Split Layout Grid */
+            .signup-section {
+                flex-direction: row; 
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 8rem; 
+                margin-bottom: 4.5rem;
+            }
+
+            .form-column {
+                flex: 1;
+                max-width: 460px; 
+            }
+            
+            .history-pathway {
+                padding-top: 2.5rem;
+                margin-bottom: 3.5rem;
+            }
+
+            .pathway-link {
+                font-size: 1.6rem;
+            }
+
+            footer {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 2rem;
+            }
+
+            .cookie-banner {
+                padding: 1.5rem 2rem;
+            }
+
+            .cookie-container {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 3rem;
+            }
+
+            .cookie-text {
+                max-width: 750px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        
+        <!-- 1. Logo -->
+        <header>
+            <img src="logo.svg" alt="Aba Ra! Soho Logo" class="brand-logo">
+        </header>
+
+        <!-- 2. Text Content -->
+        <main>
+            <h1 class="headline">Congratulations.</h1>
+
+            <section class="emotional-statement">
+                <p>You’ve just discovered Aba-Ra before its Soho opening.</p>
+                <p>A celebrated Georgian restaurant is bringing its next chapter to Soho.</p>
+                
+                <p>Leave your details below and receive:</p>
+                <ul>
+                    <li>Early access to reservations before the doors officially open.</li>
+                    <li>A complimentary glass of Georgian wine when you visit during our first 30 days of opening.</li>
+                </ul>
+            </section>
+        </main>
+
+        <!-- 3. Tendrils Image -->
+        <div class="hero-image-container">
+            <img src="grapevine-tendrils.jpg" alt="Aba Ra! Georgian grapevine tendrils structured art installation" class="hero-image">
+        </div>
+
+        <!-- 5. Registration Form -->
+        <div class="signup-section">
+            <div class="form-column">
+                <form action="send.php" method="POST" class="lead-form" id="guest-signup-form">
+                    
+                    <!-- SPAM GUARD (Honeypot Hidden Field) -->
+                    <div class="form-verify-field" aria-hidden="true">
+                        <label for="form-val-verify">If you are human, leave this empty:</label>
+                        <input type="text" id="form-val-verify" name="form_val_verify" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="user-name">Your Name</label>
+                        <input type="text" id="user-name" name="name" required class="input-field" autocomplete="name">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="user-email">Your Email Address</label>
+                        <input type="email" id="user-email" name="email" required class="input-field" autocomplete="email">
+                    </div>
+
+                    <button type="submit" class="submit-btn">Join the list</button>
+                    
+                    <p class="privacy-note">We respect your privacy. Unsubscribe at any time.</p>
+                </form>
+            </div>
+        </div>
+
+        <!-- 6. Aba Ra! Brick Lane Link -->
+        <div class="history-pathway">
+            <p class="pathway-label">Aba Ra! Brick Lane</p>
+            <a href="https://abara.co.uk/" class="pathway-link">
+                Before Soho, there was Brick Lane. 
+                <span>Explore the restaurant that inspired the next chapter →</span>
+            </a>
+        </div>
+
+        <!-- 7. Footer -->
+        <footer>
+            <p>© 2026 Aba Ra! Restaurant Soho. All rights reserved.</p>
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <a href="/privacy-policy" class="footer-link">Privacy Policy</a>
+                <a href="#" id="cookie-settings-trigger" class="footer-link">Cookie Settings</a>
+            </nav>
+        </footer>
+
+    </div>
+
+    <!-- 8. Cookie Consent Banner -->
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie Consent Banner">
+        <div class="cookie-container">
+            <p class="cookie-text">
+                We use cookies to optimize your signup experience and analyze traffic. By clicking “Accept”, you consent to our use of non-essential performance cookies. View our <a href="/privacy-policy">Privacy Policy</a>.
+            </p>
+            <div class="cookie-actions">
+                <button id="cookie-accept" class="cookie-btn cookie-btn--accept">Accept</button>
+                <button id="cookie-reject" class="cookie-btn cookie-btn--reject">Reject</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- --- JavaScript Modules --- -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            
+            // --- Honeypot "Spam Guard" Frontend Validation ---
+            const signupForm = document.getElementById('guest-signup-form');
+            if (signupForm) {
+                signupForm.addEventListener('submit', function (e) {
+                    const honeypotVal = document.getElementById('form-val-verify').value;
+                    if (honeypotVal !== "") {
+                        // Silently block bot submission
+                        e.preventDefault();
+                        console.warn("Automated submission filtered.");
+                    }
+                });
+            }
+
+            // --- Cookie Consent Banner Functionality ---
+            const cookieBanner = document.getElementById('cookie-banner');
+            const acceptBtn = document.getElementById('cookie-accept');
+            const rejectBtn = document.getElementById('cookie-reject');
+            const settingsTrigger = document.getElementById('cookie-settings-trigger');
+
+            // Show banner if choice hasn't been saved in localStorage
+            const savedConsent = localStorage.getItem('abara_cookie_consent');
+            if (!savedConsent) {
+                // Subtle delay to load smoothly
+                setTimeout(() => {
+                    cookieBanner.classList.add('is-visible');
+                }, 1000);
+            }
+
+            acceptBtn.addEventListener('click', function () {
+                localStorage.setItem('abara_cookie_consent', 'accepted');
+                cookieBanner.classList.remove('is-visible');
+            });
+
+            rejectBtn.addEventListener('click', function () {
+                localStorage.setItem('abara_cookie_consent', 'rejected');
+                cookieBanner.classList.remove('is-visible');
+            });
+
+            // Re-open cookie banner settings on request
+            if (settingsTrigger) {
+                settingsTrigger.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    cookieBanner.classList.add('is-visible');
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
