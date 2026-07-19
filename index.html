@@ -410,7 +410,7 @@
             }
 
             .hero-image {
-                content: url('grapevine-tendrils-desktop.jpg');
+            
                 width: 100%;
             }
 
@@ -487,9 +487,12 @@
         </main>
 
         <!-- 3. Tendrils Image -->
-        <div class="hero-image-container">
-            <img src="grapevine-tendrils.jpg" alt="Aba Ra! Georgian grapevine tendrils structured art installation" class="hero-image">
-        </div>
+<div class="hero-image-container">
+    <picture style="width: 100%;">
+        <source media="(min-width: 1024px)" srcset="grapevine-tendrils-desktop.jpg">
+        <img src="grapevine-tendrils.jpg" alt="Aba Ra! Georgian grapevine tendrils structured art installation" class="hero-image">
+    </picture>
+</div>
 
         <!-- 5. Registration Form -->
         <div class="signup-section">
